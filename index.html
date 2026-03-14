@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak | Premium Greeting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="sky">
+        <div class="stars"></div>
+        <div class="moon"></div>
+    </div>
+
+    <div class="wrapper">
+        <h1 class="title">Eid Mubarak</h1>
+
+        <div class="envelope-wrapper" id="envelope" onclick="openAndPlay()">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="letter-text">
+                        <h3>প্রিয় বন্ধু,</h3>
+                        <p>রমজানের শেষে খুশির চাঁদ উঠেছে। তোমার জীবনে বয়ে আনুক অনাবিল আনন্দ আর শান্তি। ঈদ মোবারক!</p>
+                        <button class="salami-btn" onclick="showSalami(event)">সালামি নাও 🧧</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="hint">চিঠিটি দেখতে খামের ওপর ক্লিক করো!</p>
+        <p id="status" style="color: #fbbf24; font-size: 0.8rem; margin-top: 10px;"></p>
+    </div>
+
+    <div id="salamiModal" class="modal">
+        <div class="modal-card">
+            <h3>সালামি কত নিবে? 😉</h3>
+            <button onclick="giveSalami(1000)">১০০০ টাকা</button>
+            <button onclick="giveSalami(500)">৫০০ টাকা</button>
+            <button onclick="giveSalami(200)">২০০ টাকা</button>
+        </div>
+    </div>
+
+    <div id="takaModal" class="modal" onclick="this.style.display='none'">
+        <div class="taka-content">
+            <img id="takaImg" src="" alt="Taka">
+            <h2 id="takaText"></h2>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="eid.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
